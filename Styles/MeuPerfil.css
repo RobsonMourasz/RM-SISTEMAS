@@ -34,15 +34,20 @@ body{
     list-style: none;
     text-decoration: none;
 }
-
 .cabecalho-lista-item{
-    margin-top: .1em;
+    transform: translate(0) scale(1);
+    transition: transform 1s ;
 }
 
-.cabecalho-lista-item a:hover {
+.cabecalho-lista-item:hover,
+.cabecalho-lista-item:focus{
+    transform: translate(1em) scale(1.2);
+}
+
+.cabecalho-lista-item a:hover,
+.cabecalho-lista-item a:focus {
     color: var(--corSecundaria);
-    border-top: 1px solid var(--corSecundaria);
-    transition: color .3s ease-in-out, border-top 1s;
+    transition: color .3s ease-in-out;
 }
 
 
